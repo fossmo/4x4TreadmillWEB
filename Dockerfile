@@ -21,6 +21,6 @@ COPY static/ ./static/
 
 RUN mkdir -p data
 
-EXPOSE 8080
+EXPOSE 8389
 
 CMD ["./server"]

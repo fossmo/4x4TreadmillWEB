@@ -2,7 +2,7 @@ services:
   web:
     build: .
     ports:
-      - "8080:8080"
+      - "8389:8389"
     volumes:
       - feedback-data:/app/data
     environment:

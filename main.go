@@ -25,7 +25,7 @@ const (
 	maxFeedbackLength = 1000
 	captchaTTL        = 10 * time.Minute
 	feedbackFile      = "data/feedback.json"
-	listenAddr        = ":8080"
+	listenAddr        = ":8389"
 	defaultAdminUser  = "admin"
 	defaultAdminPass  = "changeme"
 )
