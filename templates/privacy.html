@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — 4×4 Treadmill</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">4×4 Treadmill</a>
+            <nav class="nav">
+                <a href="/#features">Features</a>
+                <a href="/#screenshots">Screenshots</a>
+                <a href="/#feedback">Feedback</a>
+                <a href="/privacy">Privacy</a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="privacy">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p class="privacy-updated">Last updated: March 15, 2026</p>
+
+            <h2>Introduction</h2>
+            <p>4×4 Treadmill ("the App") is developed by Proglab. This privacy policy explains how we handle your data when you use the App.</p>
+
+            <h2>Data Collection — The App</h2>
+            <p>The App stores all workout data (heart rate samples, workout sessions, settings) <strong>locally on your device</strong>. We do not collect, transmit, or store any of your workout data on external servers.</p>
+            <ul>
+                <li><strong>Heart Rate Data:</strong> Read from your Bluetooth heart rate sensor or Apple Watch during workouts. Stored locally on your device only.</li>
+                <li><strong>Location Data:</strong> If you grant permission, used to track distance and pace. Stored locally on your device only.</li>
+                <li><strong>Workout History:</strong> All workout sessions and statistics are stored locally in the app's data container.</li>
+            </ul>
+
+            <h2>Data Collection — This Website</h2>
+            <p>This promotional website collects minimal data:</p>
+            <ul>
+                <li><strong>Feedback Form:</strong> If you choose to submit feedback, the text you enter is stored on our server. We do not collect your name, email address, or IP address through the feedback form.</li>
+            </ul>
+
+            <h2>Bluetooth &amp; Sensors</h2>
+            <p>The App uses Bluetooth Low Energy (BLE) to connect to heart rate monitors. This connection is used solely to receive heart rate data during workouts. No data is sent to the sensor device.</p>
+
+            <h2>Third-Party Services</h2>
+            <p>The App does not integrate with any third-party analytics, advertising, or tracking services.</p>
+
+            <h2>Data Sharing</h2>
+            <p>We do not sell, share, or transfer any of your data to third parties.</p>
+
+            <h2>Data Deletion</h2>
+            <p>All App data can be deleted by removing the App from your device. Website feedback can be deleted upon request by contacting us.</p>
+
+            <h2>Children's Privacy</h2>
+            <p>The App is not directed at children under 13. We do not knowingly collect data from children.</p>
+
+            <h2>Contact</h2>
+            <p>If you have questions about this privacy policy, contact us at:</p>
+            <p><a href="mailto:treadmill@proglab.no">treadmill@proglab.no</a></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo">4×4 Treadmill</span>
+                <p>Your personal interval training coach.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links</h4>
+                <a href="/#features">Features</a>
+                <a href="/#screenshots">Screenshots</a>
+                <a href="/privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <a href="mailto:treadmill@proglab.no">treadmill@proglab.no</a>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; {{.Year}} Proglab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('nav-open');
+            this.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

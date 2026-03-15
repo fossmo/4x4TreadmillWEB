@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Feedback — Admin</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .admin-page {
+            padding: 40px 0 80px;
+            min-height: 80vh;
+        }
+        .admin-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .admin-header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--color-amber);
+            color: var(--color-charcoal);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 4px 14px;
+            border-radius: 50px;
+        }
+        .feedback-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .feedback-item {
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 24px;
+        }
+        .feedback-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .feedback-id {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--color-slate-light);
+        }
+        .feedback-time {
+            font-size: 0.85rem;
+            color: var(--color-slate);
+            font-weight: 500;
+        }
+        .feedback-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--color-charcoal);
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: var(--color-slate);
+        }
+        .empty-state p {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">4×4 Treadmill</a>
+            <nav class="nav">
+                <a href="/">Back to Site</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="admin-page">
+        <div class="container">
+            <div class="admin-header">
+                <h1>User Feedback</h1>
+                <span class="badge">{{.Count}} {{if eq .Count 1}}entry{{else}}entries{{end}}</span>
+            </div>
+
+            {{if eq .Count 0}}
+            <div class="empty-state">
+                <p>No feedback has been submitted yet.</p>
+            </div>
+            {{else}}
+            <div class="feedback-list">
+                {{range .Entries}}
+                <div class="feedback-item">
+                    <div class="feedback-meta">
+                        <span class="feedback-time">{{.Timestamp}}</span>
+                        <span class="feedback-id">{{.ID}}</span>
+                    </div>
+                    <div class="feedback-text">{{.Text}}</div>
+                </div>
+                {{end}}
+            </div>
+            {{end}}
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-bottom">
+            <p>&copy; {{.Year}} Proglab. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

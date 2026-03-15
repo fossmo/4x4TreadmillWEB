@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(file:*)",
+      "Bash(grep:*)",
+      "Bash(mkdir -p templates static/css static/images data)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.15.42.png\" static/images/home.png)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.15.54.png\" static/images/workout.png)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.16.54.png\" static/images/activities.png)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.17.05.png\" static/images/detail.png)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.17.19.png\" static/images/chart.png)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.17.34.png\" static/images/settings.png)",
+      "Bash(cp \"images/Simulator Screenshot - iPhone 17 - 2026-03-15 at 12.17.41.png\" static/images/complete.png)",
+      "Bash(go mod:*)",
+      "Bash(go build:*)",
+      "Bash(pkill -f './server')",
+      "Bash(docker build:*)",
+      "Bash(curl:*)"
+    ]
+  }
+}
